@@ -41,7 +41,7 @@ public class EstructurasCondicionales {
           }
 
         //switch
-          char opcion = 'B';
+          char opcion = 'C';
 
           switch (opcion) {
               case 'A':
