@@ -5,12 +5,11 @@ import java.util.Scanner;
 public class StringMetodos {
 
 	public static void main(String[] args) {
-		   //Longitud de una cadena
+		//Longitud de una cadena
         System.out.println("\nLongitud con length()");
         System.out.println("---------------------");
         String frase = "Java es potente.";
         int numeroDeCaracteres = frase.length();
-
         System.out.println("La frase '" + frase + "' tiene " + numeroDeCaracteres + " caracteres.");
         
  
@@ -72,10 +71,10 @@ public class StringMetodos {
         System.out.println("------------------------------------");
         
         String fraseBuscar = "El lenguaje de programación es Java.";
-
+        
         boolean contieneJava = fraseBuscar.contains("Java");  
-        boolean contienePython = frase.contains("Python"); 
-        boolean contienejava = frase.contains("java");   
+        boolean contienePython = fraseBuscar.contains("Python"); 
+        boolean contienejava = fraseBuscar.contains("java");   
         
         System.out.println("¿Contiene Java? " + contieneJava);
         System.out.println("¿Contiene Python? " + contienePython);
@@ -86,12 +85,12 @@ public class StringMetodos {
 
         boolean esDocumento = fichero.startsWith("documento");
         boolean esImagen = fichero.startsWith("imagen");  
-        System.out.println("¿Empeiza por 'documento'? " + esDocumento);
+        System.out.println("¿Empieza por 'documento'? " + esDocumento);
         System.out.println("¿Empieza por'imagen'? " + esImagen);
         
         boolean esPdf = fichero.endsWith(".pdf");
         boolean esTxt = fichero.endsWith(".txt");
-        System.out.println("¿Terminna por '.pdf'? " + esPdf);
+        System.out.println("¿Termina por '.pdf'? " + esPdf);
         System.out.println("¿Termina por '.txt'? " + esTxt);
 
         
@@ -104,6 +103,7 @@ public class StringMetodos {
         int posicionArroba = email.indexOf("@"); 
         int posicionPunto = email.indexOf("."); 
         int posicionGuion = email.indexOf("-"); 
+  
         
         System.out.println("Posición de la @ " + posicionArroba + 
         		" Posición del punto " + posicionPunto

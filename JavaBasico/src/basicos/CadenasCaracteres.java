@@ -120,6 +120,7 @@ public class CadenasCaracteres {
         System.out.println("----------------------");
         String saludoCompleto = saludar.concat(mundo);
         System.out.println(saludoCompleto);
+        //System.out.println (saludar + mundo);
         
 
         

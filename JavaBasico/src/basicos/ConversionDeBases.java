@@ -6,7 +6,10 @@ public class ConversionDeBases {
 
         // Nuestro número de partida en base 10 (decimal)
         int numeroDecimal = 255;
-
+        String cadena = new String("Hola");
+        String cadena2= "Hola";
+        
+        
         System.out.println("--- Conversión del número " + numeroDecimal + " a otras bases ---");
         System.out.println("-----------------------------------------------------");
 
