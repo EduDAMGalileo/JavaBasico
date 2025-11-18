@@ -15,9 +15,7 @@ public class MostrarIniciales {
 		System.out.println("La posición del espacio es: " + posicionApellido);
 		
 		System.out.println(nombre.charAt(0) + "." + nombre.charAt(posicionApellido));
-
-		int sumaHecha =suma(3, 7);
-		System.out.println(sumaHecha);
+;
  
 		leer.close();
 	}
