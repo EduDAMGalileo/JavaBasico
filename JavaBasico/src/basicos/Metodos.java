@@ -1,5 +1,7 @@
 package basicos;
 
+import java.util.Scanner;
+
 public class Metodos {
 
 
@@ -35,7 +37,8 @@ public class Metodos {
 	}
 	
     public static int multiplicar(int a, int b) {
-        return a * b; // Se puede devolver el resultado de una expresión directamente.
+    	int resultado = a * b;
+        return resultado; // Se puede devolver el resultado de una expresión directamente.
     }
 	
     public static String crearSaludo(String nombre) {
@@ -45,8 +48,26 @@ public class Metodos {
     
     //Método main
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce tu nombre: ");
+		String name = sc.nextLine();
+		System.out.println("Introduce tu nombre segunda persona: ");
+		String name2 = sc.nextLine();
+		System.out.println("Introduce tu nombre tercera persona: ");
+		String name3 = sc.nextLine();
 		imprimirBienvenida();
+		
+		saludarUsuario(name);
+		saludarUsuario(name2);
+		saludarUsuario(name3);
+		//No tiene por qué ser una varaible, tiene que ser un String
+		saludarUsuario("Ana");
+		
+		int sum = sumar(4,7);
 
+
+		imprimirDespedida();
+		sc.close();
 	}
 
 }
