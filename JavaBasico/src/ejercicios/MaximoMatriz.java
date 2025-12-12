@@ -13,25 +13,21 @@ public class MaximoMatriz {
 		int[][] matriz = new int[fila][columna];
 		
 		Recursos.rellenarMatrizAleatoria(matriz, 100);
-		
 		Recursos.mostrarMatriz(matriz);
 		
-		/*
-		//Rellenamos la matriz con números aleatorios
+		int maximo = matriz[0][0];
+		
 		for (int i=0; i<matriz.length;i++) {
-			for(int j=0; j<matriz[0].length;j++) {
-				matriz[i][j] = Aleatorio.numAleatorio(100);
+			for (int j=0; j<matriz[0].length;j++) {
+				if (maximo < matriz[i][j]) {
+					maximo = matriz[i][j];
+				}
 			}
-			System.out.println("");
 		}
-		//Mostramos la matriz por pantalla
-		for (int i=0; i<matriz.length;i++) {
-			for(int j=0; j<matriz[0].length;j++) {
-				System.out.print(matriz[i][j] + " ");
-			}
-			System.out.println("");
-		}
-		*/
+		
+		System.out.print("\n El valor máximo es: " + maximo);
+		
+		
 		
 	}
 
