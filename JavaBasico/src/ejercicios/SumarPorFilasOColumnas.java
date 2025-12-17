@@ -25,24 +25,14 @@ public class SumarPorFilasOColumnas {
 		}
 		
 		//Recorremos por columnas
-		/*
-		for(int j=0;j<matriz[0].length;j++) {
-			int acumColumnas=0;
-			for (int i=0; i<matriz.length; i++) {
-				acumColumnas=acumColumnas+matriz[i][j];
-			}
-			System.out.println("\n La columna nº"+ (j+1) + " suma: " +  acumColumnas);
-		}
-		 */
 		for(int j=0;j<matriz[0].length;j++) {
 			int acumular=0;
 			for (int i=0; i<matriz.length;i++) {
 				acumular=acumular+matriz[i][j];
 			}
-			System.out.println("\n La columna nº1  suma: " + acumular);
+			System.out.println("\n La columna nº "+ (j+1)+ " suma: " + acumular);
 		}
 
-			
 	}
 
 }
