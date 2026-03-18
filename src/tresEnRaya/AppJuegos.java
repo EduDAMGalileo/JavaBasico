@@ -13,6 +13,7 @@ public class AppJuegos {
 			System.out.println("¿A qué quieres jugar?");
 			System.out.println("1-Tres en raya");
 			System.out.println("2-Tres en raya miseria");
+			System.out.println("3-Tres en raya desplazamiento");
 			System.out.println("0-Salir");
 			eleccion=sc.nextInt();
 
@@ -26,8 +27,15 @@ public class AppJuegos {
 			case 2:
 				System.out.println("Jugando a la variante miseria");
 				TresEnRayaMisery partida2 = new TresEnRayaMisery("Edu", 'X', "Ana", 'O');
+				partida2.inicio();
 	
 				break;
+			case 3:
+				System.out.println("Jugando a la variante de desplazamiento");
+				TresEnRaya3Fichas partida3 = new TresEnRaya3Fichas("Edu", 'X', "Ana", 'O');
+				partida3.inicio();
+				break;
+				
 			case 0:
 				System.out.println("Vuelve pronto!");
 			}

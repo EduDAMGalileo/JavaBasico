@@ -21,7 +21,7 @@ public class Tablero {
 	
 	public void mostrar() {
 		System.out.println("\n Tablero actual \n-----------------");
-		for (int i=0; i < dimension; i++) {
+		for (int i=0; i < dimension+2; i++) {
 			for(int j=0; j< dimension;j++) {
 				System.out.print(casillas[i][j] + "\t");
 			}
@@ -29,10 +29,49 @@ public class Tablero {
 		}
 	}
 	
+	public char getFicha(int f, int c) {
+		if (f>=0 && f<dimension && c>=0 && c<dimension ) {
+			return casillas[f][c];
+		}
+		return ' ';
+	}
+	
 	public boolean hayGanador(){
 		//divide y vencerás
 		return comprobarColumnas() || comprobarFilas() || comprobarDiagonalPrincipal() || comprobarDiagonalInversa();
 	}
+	
+	public boolean hayEmpate() {
+		//Hay que tener cuidado por si alguien gana en la última jugada
+		for (int i=0; i < dimension; i++){
+			for (int j=0; j < dimension; j++) {
+				if (casillas[i][j]=='-') {
+					//Si encontramos un guión significa que hay un espacio libre y por tanto no acaba la partida
+					return false;
+				}
+			}
+		}
+		//Si llegamos aquí no hya guiones y por tanto no hay espacios es un empate
+		return true;
+	}
+
+	public boolean colocarFicha(int f, int c, char ficha) {
+		//Vamos a controlar si nos salimos del tablero
+		if (f < 0 || f >= dimension || c < 0 || c >= dimension) {
+			System.out.println("Fuera del tablero");
+			return false;
+		}
+		
+		//Compruebo si la celda ya esta ocupada
+		if (casillas[f][c]!='-') {
+			System.out.println("Casilla ocupada");
+			return false;
+		}
+		
+		casillas[f][c]=ficha;
+		return true;
+	}
+	
 	
 	private boolean comprobarColumnas() {
 		for (int j = 0; j < dimension; j++ ) {
@@ -104,35 +143,5 @@ public class Tablero {
 	
 	}
 	
-	public boolean hayEmpate() {
-		//Hay que tener cuidado por si alguien gana en la última jugada
-		for (int i=0; i < dimension; i++){
-			for (int j=0; j < dimension; j++) {
-				if (casillas[i][j]=='-') {
-					//Si encontramos un guión significa que hay un espacio libre y por tanto no acaba la partida
-					return false;
-				}
-			}
-		}
-		//Si llegamos aquí no hya guiones y por tanto no hay espacios es un empate
-		return true;
-	}
 
-	public boolean colocarFicha(int f, int c, char ficha) {
-		//Vamos a controlar si nos salimos del tablero
-		if (f < 0 || f >= dimension || c < 0 || c >= dimension) {
-			System.out.println("Fuera del tablero");
-			return false;
-		}
-		
-		//Compruebo si la celda ya esta ocupada
-		if (casillas[f][c]!='-') {
-			System.out.println("Casilla ocupada");
-			return false;
-		}
-		
-		casillas[f][c]=ficha;
-		return true;
-	}
-	
 }

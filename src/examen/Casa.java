@@ -23,6 +23,10 @@ public final class Casa extends Inmueble{
 			habitaciones.add(h);
 		}
 	}
+	
+	public void infoVentanasHabitacion(int i) {
+		System.out.println(habitaciones.get(0).getNumVentanas());
+	}
 
 	@Override
 	public String toString() {

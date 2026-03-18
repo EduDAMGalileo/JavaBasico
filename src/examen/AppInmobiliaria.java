@@ -21,6 +21,10 @@ public class AppInmobiliaria {
 		}
 		
 		System.out.println("¿Con iguales? " + (inmuebles.get(1).equals(inmuebles.get(2))));
+		
+		Habitacion hab = new Habitacion("Salon",3,14);
+		hab.getNumVentanas();
+		hab.getUso();
 	}
 
 }
