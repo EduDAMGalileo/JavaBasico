@@ -1,6 +1,6 @@
 package laboratorios.excepciones;
 
-public class Tienda {
+public class AppTienda {
 
     public static Producto buscarProducto(Producto[] catalogo, String nombre) {
         for (Producto p : catalogo) {
