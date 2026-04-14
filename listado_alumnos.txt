@@ -1,0 +1,4 @@
+--- LISTADO DE MATRICULADOS ---
+1. Roberto García
+2. Laura Pérez
+Total de alumnos: 2
