@@ -8,7 +8,7 @@ public class LectorSencillo {
     public static void main(String[] args) {
         
         File miArchivo = new File("listado_alumnos.txt");
-        Scanner lector = null; 
+        Scanner lector = null;
         
         try {
             System.out.println("Intentando abrir el archivo para lectura...\n");
