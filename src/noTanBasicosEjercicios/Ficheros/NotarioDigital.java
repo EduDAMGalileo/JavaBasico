@@ -1,4 +1,4 @@
-package noTanBasicosEjercicios;
+package noTanBasicosEjercicios.Ficheros;
 
 import java.io.File;
 import java.io.FileNotFoundException;

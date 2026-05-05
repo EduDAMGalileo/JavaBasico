@@ -1,4 +1,4 @@
-package noTanBasicosEjercicios;
+package noTanBasicosEjercicios.Ficheros;
 
 import java.io.FileWriter;
 import java.io.IOException;
