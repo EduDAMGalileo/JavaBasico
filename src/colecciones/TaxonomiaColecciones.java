@@ -11,12 +11,9 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class TaxonomiaColecciones {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
-	}
-
-	public static void demostrarFaltaDeVision(List<Cliente> lista) {
+	public  void demostrarFaltaDeVision(List<Cliente> lista) {
 		// MALA PRÁCTICA (Reinventando la rueda):
 		// El programador necesita que no haya clientes duplicados, pero decide
 		// usar una List y hacer la comprobación manualmente.
@@ -30,7 +27,7 @@ public class TaxonomiaColecciones {
 		}
 	}
 
-	public static void demostrarVisionEstructural() {
+	public  void demostrarVisionEstructural() {
 		// ESTÁNDAR DE LA INDUSTRIA (Usando la rama correcta del Framework)
 
 		// 1. RAMA SET: Elegimos Set cuando nuestra regla de negocio es la "Unicidad"
