@@ -15,7 +15,6 @@ public class ConversorPrecios {
 		File fichEscritura = new File("factura.txt");
 		Scanner lector = null;
 		PrintWriter escritor = null;
-
 		try {
 			lector = new Scanner(fichLectura);
 			escritor = new PrintWriter(fichEscritura);
@@ -30,9 +29,7 @@ public class ConversorPrecios {
 					escritor.println("Error - Revisar");
 					lector.nextLine();
 				}
-
 			}
-
 		}catch (FileNotFoundException e) {
 			System.out.println("El fichero " + fichLectura.getName() +" no existe");
 			//e.printStackTrace();
@@ -41,7 +38,6 @@ public class ConversorPrecios {
 			lector.close();
 			escritor.close();
 		}
-
 		System.out.println("Hemos terminado!");
 	}
 

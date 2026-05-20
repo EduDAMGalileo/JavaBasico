@@ -1,4 +1,4 @@
-package noTanBasicosEjercicios.Ficheros;
+package noTanBasicosEjercicios.excepciones;
 
 import java.util.Scanner;
 
