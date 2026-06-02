@@ -19,8 +19,7 @@ public record TareaModerna(String id, String titulo) {
 			throw new IllegalArgumentException("El título no puede ser nulo o estar en blanco.");
 		}
 
-		// Normalización defensiva
-		// Podemos transformar el valor antes de que se asigne definitivamente.
+		// Normalización defensiva, podemos transformar el valor antes de que se asigne definitivamente.
 		// Aquí eliminamos espacios accidentales al inicio o final.
 		titulo = titulo.trim();
 

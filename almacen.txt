@@ -1,0 +1,4 @@
+Producto: Manzanas | Cantidad:100 
+Producto: Peras | Cantidad:50 
+Producto: Plátanos | Cantidad: 80
+Pruducto: Uvas | Cantidad: 1500
