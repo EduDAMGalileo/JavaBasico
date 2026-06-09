@@ -45,9 +45,4 @@ public enum Especie {
 		return aprendizajes;
 	}
 	
-	
-	
-	
-	
-
 }
