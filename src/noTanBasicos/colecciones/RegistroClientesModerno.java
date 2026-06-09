@@ -1,4 +1,4 @@
-package colecciones;
+package noTanBasicos.colecciones;
 
 import java.util.ArrayList;
 

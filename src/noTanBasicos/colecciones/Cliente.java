@@ -1,4 +1,4 @@
-package colecciones;
+package noTanBasicos.colecciones;
 
 public class Cliente {
     private String dni;

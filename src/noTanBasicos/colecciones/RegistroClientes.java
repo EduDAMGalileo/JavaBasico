@@ -1,4 +1,4 @@
-package colecciones;
+package noTanBasicos.colecciones;
 
 public class RegistroClientes {
     // MALA PRÁCTICA, PARA ILUSTRAR EL PROBLEMA (Enfoque manual): 

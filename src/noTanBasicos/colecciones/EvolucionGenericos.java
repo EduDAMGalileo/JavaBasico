@@ -1,4 +1,4 @@
-package colecciones;
+package noTanBasicos.colecciones;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ public class EvolucionGenericos {
 		demostrarSeguridadModerna();
 	}
 
-    public static  void demostrarPeligroAntiguo() {
+    public static void demostrarPeligroAntiguo() {
         // MALA PRÁCTICA (Tipos Crudos / Raw Types - Java 1.4 y anterior)
         // No usamos <T>. Esta lista admite cualquier Object.
         ArrayList listaAntigua = new ArrayList(); 
@@ -30,7 +30,7 @@ public class EvolucionGenericos {
     }
 
     public static void demostrarSeguridadModerna() {
-        // ESTÁNDAR DE LA INDUSTRIA (Uso de Genéricos - Java 5 en adelante)
+        // ESTÁNDAR (Uso de Genéricos - Java 5 en adelante)
         // Obligamos a la lista a admitir única y exclusivamente objetos Cliente.
         ArrayList<Cliente> listaModerna = new ArrayList<>();
         
