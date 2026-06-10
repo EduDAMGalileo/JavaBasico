@@ -4,18 +4,18 @@ import java.util.List;
 
 public enum Especie {
 	CHARMANDER(35, 40, 25, List.of(
-			new AprenderAtaque(1, new Ataque("Arañazo", 20)),
-			new AprenderAtaque(1, new Ataque("Gruñido", 0)),
-			new AprenderAtaque(8, new Ataque("Ascuas", 30)))),
+			new AprenderAtaque(1, new Ataque("Arañazo", 20, Tipo.NORMAL)),
+			new AprenderAtaque(1, new Ataque("Gruñido", 0, Tipo.NORMAL)),
+			new AprenderAtaque(8, new Ataque("Ascuas", 30, Tipo.FUEGO)))),
 	BULBASAUR(40, 30, 35, List.of(
-			new AprenderAtaque(1, new Ataque("Placaje", 20)),
-			new AprenderAtaque(1, new Ataque("Gruñido", 0)),
-			new AprenderAtaque(7, new Ataque("Látigo Cepa", 40)))),
+			new AprenderAtaque(1, new Ataque("Placaje", 20, Tipo.NORMAL)),
+			new AprenderAtaque(1, new Ataque("Gruñido", 0, Tipo.NORMAL)),
+			new AprenderAtaque(7, new Ataque("Látigo Cepa", 40, Tipo.PLANTA)))),
 	
 	SQUIRTLE (30, 25, 35, List.of(
-			new AprenderAtaque(1, new Ataque("Arañazo", 20)),
-			new AprenderAtaque(1, new Ataque("Gruñido", 0)),
-			new AprenderAtaque(9, new Ataque("Pistola Agua", 35))));
+			new AprenderAtaque(1, new Ataque("Arañazo", 20, Tipo.NORMAL)),
+			new AprenderAtaque(1, new Ataque("Gruñido", 0, Tipo.NORMAL)),
+			new AprenderAtaque(9, new Ataque("Pistola Agua", 35, Tipo.AGUA))));
 	
 	private final int vidaBase;
 	private final int ataqueBase;

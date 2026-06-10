@@ -23,6 +23,7 @@ public class AppPokemon {
 		pok.subirNivel();
 		
 		pok.verCaracteristicas();
+		pok.exportarCaracteristicas("bulbasaur.txt");
 		
 		pok4.verCaracteristicas();
 	}

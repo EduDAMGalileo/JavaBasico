@@ -1,0 +1,12 @@
+
+-----------------
+Especie:BULBASAUR
+Nivel:11
+Ataque:44
+Defensa:47
+Vida:56
+Ataques aprendidos: 
+ - Placaje(potencia: 20 tipo: NORMAL)
+ - Gruñido(potencia: 0 tipo: NORMAL)
+ - Látigo Cepa(potencia: 40 tipo: PLANTA)
+-----------------

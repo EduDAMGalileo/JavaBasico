@@ -1,5 +1,8 @@
 package noTanBasicosEjercicios.proyectoPokemon;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +18,6 @@ public class Pokemon {
 	private int vida;
 	private List<Ataque> ataquesAprendidos;
 	
-	//ToDo Faltan los ataques
 	public Pokemon(Especie especie) {
 		this(especie, NIVEL_INICIAL);
 	}
@@ -34,20 +36,43 @@ public class Pokemon {
 		//Ahora que tenemos un array para guardar ataques le añadimos los primeros
 		cargarAtaquesHastaNivel(this.nivel);
 	}
+	
+	private String montarCaracteristicas() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("\n-----------------");
+		sb.append("\nEspecie:" + especie);
+		sb.append("\nNivel:" + nivel);
+		sb.append("\nAtaque:" + ataque);
+		sb.append("\nDefensa:" + defensa);
+		sb.append("\nVida:" + vida);
+		sb.append("\nAtaques aprendidos: ");
+		for (Ataque at : ataquesAprendidos) {
+			sb.append("\n - " + at.nombre() + "(potencia: " + at.potencia() 
+			+ " tipo: " + at.tipoAtaque() + ")");
+		}
+		sb.append("\n-----------------");
+		return sb.toString();
+	}
 
 	public void verCaracteristicas() {
-		System.out.println("\n-----------------");
-		System.out.println("Especie:" + especie);
-		System.out.println("Nivel:" + nivel);
-		System.out.println("Ataque:" + ataque);
-		System.out.println("Defensa:" + defensa);
-		System.out.println("Vida:" + vida);
-		System.out.println("Ataques aprendidos: ");
-		for (Ataque at : ataquesAprendidos) {
-			System.out.println(" - " + at.nombre() + "(potencia: " + at.potencia() + ")");
+		System.out.println(montarCaracteristicas());
+	}
+	
+	public void exportarCaracteristicas(String nombreFichero) {
+		File archivo = new File(nombreFichero);
+		PrintWriter escritor = null;
+		try {
+			escritor = new PrintWriter(archivo);
+			escritor.println(montarCaracteristicas());
+		} catch (FileNotFoundException e) {
+			System.out.println("No existe el fichero");
+		} finally {
+			//cerrar si existe el escritor
+			if (escritor != null) {
+				escritor.close();
+			}
 		}
-		System.out.println("-----------------");
-		
 	}
 
 	private void cargarAtaquesHastaNivel(int nivel) {
