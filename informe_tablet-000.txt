@@ -1,0 +1,7 @@
+Multi-fix INFORME
+Cliente: tablet-000
+---------------
+Avería Cambio de pantalla
+Coste de la reparación 65.0
+------------
+Total facturado: 65.0

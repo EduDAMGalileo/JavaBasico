@@ -1,0 +1,9 @@
+Multi-fix INFORME
+Cliente: 2222-BBB
+---------------
+Avería Cambio de aceite
+Coste de la reparación 54.0
+Avería Arreglar pinchazo
+Coste de la reparación 81.0
+------------
+Total facturado: 135.0
