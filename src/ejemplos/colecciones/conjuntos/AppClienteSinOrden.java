@@ -13,11 +13,13 @@ public class AppClienteSinOrden {
 		System.out.println("Intentando añadir a Ana (El primer elemento)...");
 
 		try {
-			// AQUÍ EXPLOTA EL SISTEMA INMEDIATAMENTE.
-			// En el Java moderno, el árbol es implacable. Antes de dejar que Ana 
-			// ocupe la Raíz, el sistema verifica sus "credenciales".
-			// Al ver que la clase ClienteSinOrden no sabe cómo ordenarse,
-			// aborta la operación al instante, aplicando la filosofía "Fail-Fast".
+			/* AQUÍ EXPLOTA EL SISTEMA INMEDIATAMENTE.
+			 En Java, el árbol es implacable. Antes de dejar que Ana 
+			 ocupe la Raíz, el sistema verifica sus "credenciales".
+			 Al ver que la clase ClienteSinOrden no sabe cómo ordenarse,
+			 aborta la operación al instante, aplicando la filosofía "Fail-Fast".
+			 */
+			
 			arbol.add(new ClienteSinOrden("Ana")); 
 
 			System.out.println("   -> Ana añadida con éxito."); // Esta línea nunca se ejecutará
